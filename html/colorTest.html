@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kotkantien maalaus- ja tapetointi Oy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <!-- lataa jscolor kirjaston js kansiosta -->
+  <script src="../js/jscolor.js"></script>
+
+  <!-- navigointi palkki -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../html/index.html">Etusivu</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="../html/products.html">Palvelut</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="../html/colorTest.html">Värien testaus</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="../html/gallery.html">Galleria</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="../html/contactInfo.html">Yhteystiedot</a></li>
+      </ul>
+    </div>
+</nav>
+<br>
+  <!-- painonapit mitkä käyttää jscolor kirjastoa -->
+  <p style="text-align: center; text-decoration: none;">
+		Painamalla voit kokeilla eri värejä:
+		<button data-jscolor="{
+			onChange: 'update(this, \'#pr1\')',
+			alpha:1, value:'DD4132'}">
+    </button>
+    <button data-jscolor="{
+      onChange: 'update(this, \'#pr2\')',
+      alpha:1, value:'9E1030 '}">
+    </button>
+    <button type="button" onClick="window.location.reload()">Nollaa värit</button>
+	</p>
+    <!-- Väri esimerkki laatikot -->
+	<em id="pr1" style="display:inline-block; padding:1em; width:45%; height: 100px;"></em>
+	<em id="pr2" style="display:inline-block; padding:1em; width:45%; height: 100px"></em>
+
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Löydät meidät myös sosiaalisesta mediasta!</span>
+    </div>
+
+    <!-- Right -->
+    <div>
+      <a href="#" class="me-4 text-reset text-decoration-none">
+        <i class="bi bi-facebook"></i></a>
+      <a href="#" class="me-4 text-reset text-decoration-none">
+        <i class="bi bi-twitter"></i></a>
+      <a href="#" class="me-4 text-reset text-decoration-none">
+        <i class="bi bi-instagram"></i></a>
+      <a href="#" class="me-4 text-reset text-decoration-none">
+        <i class="bi bi-youtube"></i></a>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Kotkantien maalaus- ja tapetointi Oy</h6>
+          <p>Kotkantien maalaus- ja tapetointi on perustettu vuonna 2023. Se on osakeyhtiö, jonka kotipaikka on Oulu, ja pääasiallinen toimiala Rakennusliike.</p>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col">Osoite:</div>
+          <div class="col">Kotkantie 3, 90100 Oulu</div>
+          <div class="col">Sähköposti:</div>
+          <div class="col">info@kotkantienmaalaus.fi</div>
+        </div>
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col">Puhelin numero:</div>
+          <div class="col">044 999 888 99</div>
+          <div class="col">Y-tunnus:</div>
+          <div class="col">1234567-1 1234567-1</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+<script>
+	function update(picker, selector) {
+		document.querySelector(selector).style.background = picker.toBackground()
+	}
+
+	// triggers 'onInput' and 'onChange' on all color pickers when they are ready
+	jscolor.trigger('input change');
+	</script>
+
+	<script>
+    // Here we can adjust defaults for all color pickers on page:
+    jscolor.presets.default = {
+      palette: [
+        '#DD4132', '#9E1030', '#FE840E', '#FF6F61', '#C62168', '#8D9440', '#FFD662', '#00539C', 
+        '#755139', '#D69C2F', '#616247', '#E8B5CE', '#D2C29D', '#343148', '#F0EAD6', '#615550',
+      ],
+  }
+    </script>
+</body>
